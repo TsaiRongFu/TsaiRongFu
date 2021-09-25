@@ -8,9 +8,6 @@
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=tsairongfu&show_icons=true&locale=en&layout=compact" alt="tsairongfu" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=tsairongfu&show_icons=true&locale=en" alt="tsairongfu" /></p>
-
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=tsairongfu&count_private=true" alt="tsairongfu" /></p>
 
 
 
