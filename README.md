@@ -6,7 +6,7 @@
 ![TsaiRongFu's GitHub Trophy](https://github-profile-trophy.vercel.app/?username=tsairongfu&theme=onedark)
 
 
-<p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=tsairongfu&show_icons=true&locale=en&layout=compact" alt="tsairongfu" /></p>
+![TsaiRongFu's GitHub Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=tsairongfu&layout=compact&theme=gruvbox&hide_border=true&langs_count=8)
 
 
 
