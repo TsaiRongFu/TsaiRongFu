@@ -2,7 +2,7 @@ name: Auto-Constructor
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # 每天 UTC 22:00（台灣時間 06:00）
+    - cron: '0 22 * * *'  # 每天 UTC 22:00（台灣時間 06:00）
   workflow_dispatch:
 
 jobs:
