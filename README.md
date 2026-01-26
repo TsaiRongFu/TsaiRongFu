@@ -1,6 +1,7 @@
-![](https://raw.githubusercontent.com/TsaiRongFu/TsaiRongFu/output/stats.svg)
-
-![TsaiRongFu's GitHub Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=tsairongfu&langs_count=8&layout=compact&hide_border=true&theme=radical)
+<p align="left">
+  <img src="https://raw.githubusercontent.com/TsaiRongFu/TsaiRongFu/output/stats.svg" height="190" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=tsairongfu&langs_count=8&layout=compact&hide_border=true&theme=radical" height="200"/>
+</p>
 
 ![](https://raw.githubusercontent.com/TsaiRongFu/TsaiRongFu/output/trophy.svg)
 
