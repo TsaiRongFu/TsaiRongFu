@@ -1,9 +1,9 @@
-name: generate trophy cards
+name: generate profile assets
 
 on:
   # run automatically every 24 hours
   schedule:
-    - cron: "0 0 * * *" 
+    - cron: "0 */1 * * *" 
   
   # allows to manually run the job at any time
   workflow_dispatch:
@@ -21,9 +21,14 @@ jobs:
     timeout-minutes: 5
     
     steps:
-      # checkout repository to get access to the repo
-      - name: checkout repository
-        uses: actions/checkout@v3
+      # generates a snake game from a github user contributions graph
+      - name: generate github-contribution-grid-snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
       
       # generate stats card
       - name: generate stats card
@@ -43,8 +48,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
       
       # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file> , or as github page
-      - name: push trophy cards to the output branch
+      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file>
+      - name: push assets to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
