@@ -35,7 +35,7 @@ jobs:
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&theme=onedark&margin-w=50&cache_seconds=7200
+          options: username=${{ github.repository_owner }}&theme=radical&margin-w=50&cache_seconds=7200
           path: dist/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -43,7 +43,7 @@ jobs:
       - name: generate trophy card
         uses: soulteary/github-profile-trophy-action@v1.0.0
         with:
-          options: username=${{ github.repository_owner }}&theme=onedark&no-frame=true
+          options: username=${{ github.repository_owner }}&theme=radical&no-frame=true
           path: dist/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
       
