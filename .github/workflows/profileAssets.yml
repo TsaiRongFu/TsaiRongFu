@@ -51,7 +51,7 @@ jobs:
       - name: generate top languages card
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
-          card: top-languages
+          card: top-langs
           options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
           path: dist/top-languages.svg
           token: ${{ secrets.GITHUB_TOKEN }}
