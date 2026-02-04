@@ -43,7 +43,7 @@ jobs:
       - name: generate trophy card
         uses: soulteary/github-profile-trophy-action@v1.0.0
         with:
-          options: username=${{ github.repository_owner }}&theme=bear&no-frame=true
+          options: username=${{ github.repository_owner }}&theme=onedark&no-frame=true
           path: dist/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
