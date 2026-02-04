@@ -1,27 +1,27 @@
 name: generate profile assets
 
 on:
-  # run automatically every 24 hours
+  # run automatically every 2 hours
   schedule:
-    - cron: "0 */1 * * *" 
-  
-  # allows to manually run the job at any time
+    - cron: "0 */2 * * *" 
+
+  # allows manual run
   workflow_dispatch:
-  
-  # run on every push on the master branch
+
+  # run on push to master
   push:
     branches:
-    - master
+      - master
 
 jobs:
   generate:
-    permissions: 
+    permissions:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    
+
     steps:
-      # generates a snake game from a github user contributions graph
+      # generate snake animation
       - name: generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
         with:
@@ -29,13 +29,13 @@ jobs:
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
-      
+
       # generate stats card
       - name: generate stats card
         uses: soulteary/github-readme-stats-action@v1.0.0
         with:
           card: stats
-          options: username=${{ github.repository_owner }}&theme=radical&margin-w=50&cache_seconds=7200
+          options: username=${{ github.repository_owner }}&theme=omni&margin-w=50&cache_seconds=7200
           path: dist/stats.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
@@ -43,12 +43,20 @@ jobs:
       - name: generate trophy card
         uses: soulteary/github-profile-trophy-action@v1.0.0
         with:
-          options: username=${{ github.repository_owner }}&theme=radical&no-frame=true
+          options: username=${{ github.repository_owner }}&theme=omni&no-frame=true
           path: dist/trophy.svg
           token: ${{ secrets.GITHUB_TOKEN }}
-      
-      # push the content of <build_dir> to a branch
-      # the content will be available at https://raw.githubusercontent.com/<github_user>/<repository>/<target_branch>/<file>
+
+      # generate top languages card
+      - name: generate top languages card
+        uses: soulteary/github-readme-stats-action@v1.0.0
+        with:
+          card: top-languages
+          options: username=${{ github.repository_owner }}&layout=compact&langs_count=6
+          path: dist/top-languages.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # push generated assets to output branch
       - name: push assets to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
